@@ -1,0 +1,54 @@
+﻿# EE569 Homework Assignment #2 
+# Date:     Sept 20, 2015 
+# Name:     Ravi Kant 
+# ID:       7945-0425-48 
+# email:    rkant@usc.edu
+# 
+# Compiled on WINDOWS 7 with g++ 
+# Define compiler and linker 
+CC=g++ 
+LN=g++ 
+All : prob_1a prob_1b prob_1c prob_2a1 prob_2a2
+prob_1a: 
+	@echo	Problem 1a: Texture Classification: Two Classes + Minimum Mean Distance Classifier
+	@echo	compiling and linking the code 
+	$(CC) -c lawsFeatureExtractor.cpp
+	$(LN) -o solution1 lawsFeatureExtractor.o  
+	@echo	running the program, usage: solution programeName Data_Location ClassA_name number_of_classA_samples classB_name number_of_classB_samples number_of_test_samples
+	solution1 /home/ravi/Documents/workspace/DisplayImage/EE569_HW2/Quest1a/images grass 36 straw 36 24
+clean :
+	del *.o *.exe *output*.raw *data*.txt
+
+prob_1b:
+	@echo Problem 1b: Bilinear Demosaicing
+	@echo compiling and linking the code 
+	$(CC) -c bilinear_demosaicing.cpp
+	$(LN) -o solution2 bilinear_demosaicing.o  
+	@echo program_name input_image input_width input_height output_image
+	Solution2 parrot_CFA.raw 424 636 parrot_output_bilinear.raw
+
+prob_1c:
+	@echo Problem 1c: Malvar-He-Cutler (MHC) Linear Image Demosaicing 
+	@echo compiling and linking the code 
+	$(CC) -c mhc_demosaic.cpp
+	$(LN) -o solution3 mhc_demosaic.o  
+	@echo program_name input_image input_width input_height output_image 
+	Solution3 parrot_CFA.raw 424 636 parrot_output_MHC.raw
+
+prob_2a1:
+	@echo Problem 2a Algo1: Histogram Equalization - transfer-function 
+	@echo compiling and linking the code 
+	$(CC) -c imgHistEqualization.cpp
+	$(LN) -o solution4 imgHistEqualization.o  
+	@echo program_name input_image input_image_width input_image_height 
+	Solution4 jet.raw 512 512
+
+
+
+prob_2a2:
+	@echo Problem 2a Algo2: Histogram Equalization  bucket filling 
+	@echo compiling and linking the code 
+	$(CC) -c imgHistEqualBucket.cpp
+	$(LN) -o solution5 imgHistEqualBucket.o  
+	@echo program_name input_image input_image_width input_image_height 
+	Solution5 jet.raw 512 512
