@@ -3,7 +3,6 @@
 
 
 Name       : Ravi Kant
-USC ID     : 7945-0425-48	
 e-mail     : rkant@usc.edu	
 Submission : Oct 3, 2015
 
