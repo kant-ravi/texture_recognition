@@ -14,6 +14,7 @@ Default Dimension of samples is 128 X 128. Change height, width to change
 default height and width respectively.
 Default number of channels nChannel = 1
 
+*/
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -274,4 +275,3 @@ int main(int argc,char *argv[])
 
 
 
-*/
