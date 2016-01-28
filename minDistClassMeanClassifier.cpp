@@ -1,11 +1,10 @@
 /*
 
 
-Name       : Ravi Kant
-USC ID     : 7945-0425-48	
+Name       : Ravi Kant	
 e-mail     : rkant@usc.edu	
 Submission : Oct 6, 2015
-
+*/
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
@@ -198,4 +197,4 @@ int main(int argc,char *argv[])
 	fout.close();
 	return(0);
 }
-*/
+
