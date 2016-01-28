@@ -4,7 +4,7 @@
  *
  *  Created on: Oct 3, 2015
  *      Author: ravi
-
+ */
 
 #include "Image.h"
 #include <stdio.h>
@@ -125,4 +125,4 @@ Image Image::clone(Image orignalImg){
 Image::~Image() {
 	// TODO Auto-generated destructor stub
 }
-*/
+
